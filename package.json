@@ -25,13 +25,13 @@
     "cordova-ios",
     "cordova-android"
   ],
-  "author": "Maksim Chemerisuk <chemerisuk@gmail.com> (https://github.com/chemerisuk)",
+  "author": "nguyenxuanhung-rightsvn",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/chemerisuk/cordova-plugin-firebase-dynamiclinks/issues"
   },
-  "homepage": "https://github.com/chemerisuk/cordova-plugin-firebase-dynamiclinks#readme",
-  "funding": "https://github.com/chemerisuk/cordova-plugin-firebase-dynamiclinks?sponsor=1",
+  "homepage": "https://github.com/nguyenxuanhung-rightsvn/cordova-plugin-firebase-dynamiclinks-stable#readme",
+  "funding": "https://github.com/nguyenxuanhung-rightsvn/cordova-plugin-firebase-dynamiclinks-stable?sponsor=1",
   "scripts": {
     "preversion": "npm run docs && rm -rf docs",
     "version": "perl -i -pe 's/(version=)\"\\d+\\.\\d+\\.\\d+\"/$1\"'$npm_package_version'\"$2/' plugin.xml && git add .",
