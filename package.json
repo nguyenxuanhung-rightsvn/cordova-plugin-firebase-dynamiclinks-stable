@@ -1,10 +1,10 @@
 {
-  "name": "cordova-plugin-firebase-dynamiclinks",
+  "name": "cordova-plugin-firebase-dynamiclinks-stable",
   "version": "7.0.3",
   "description": "Cordova plugin for Firebase Dynamic Links",
   "types": "./types/index.d.ts",
   "cordova": {
-    "id": "cordova-plugin-firebase-dynamiclinks",
+    "id": "cordova-plugin-firebase-dynamiclinks-stable",
     "platforms": [
       "ios",
       "android"
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chemerisuk/cordova-plugin-firebase-dynamiclinks.git"
+    "url": "git+https://github.com/nguyenxuanhung-rightsvn/cordova-plugin-firebase-dynamiclinks-stable#readme"
   },
   "keywords": [
     "Firebase Invites",
@@ -28,7 +28,7 @@
   "author": "nguyenxuanhung-rightsvn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chemerisuk/cordova-plugin-firebase-dynamiclinks/issues"
+    "url": "https://github.com/nguyenxuanhung-rightsvn/cordova-plugin-firebase-dynamiclinks-stable#issue"
   },
   "homepage": "https://github.com/nguyenxuanhung-rightsvn/cordova-plugin-firebase-dynamiclinks-stable#readme",
   "funding": "https://github.com/nguyenxuanhung-rightsvn/cordova-plugin-firebase-dynamiclinks-stable?sponsor=1",
