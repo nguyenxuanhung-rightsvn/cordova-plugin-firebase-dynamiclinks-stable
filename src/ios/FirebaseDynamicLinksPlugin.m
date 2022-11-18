@@ -15,8 +15,6 @@
     if ([self.domainUriPrefix hasSuffix:@"/"]) {
         self.domainUriPrefix = [self.domainUriPrefix substringToIndex:[self.domainUriPrefix length] - 1];
     }
-}
-
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleUniversalLinkOpen:) name:@"CAPUniversalLinkOpen" object:nil];
 }
