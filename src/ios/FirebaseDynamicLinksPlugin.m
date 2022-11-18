@@ -17,6 +17,32 @@
     }
 }
 
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleUniversalLinkOpen:) name:@"CAPUniversalLinkOpen" object:nil];
+}
+
+- (void)handleUniversalLinkOpen:(NSNotification*)notification
+{
+    NSMutableDictionary *object = [notification object];
+    NSURL* url = object[@"url"];
+
+    if ([url isKindOfClass:[NSURL class]]) {
+        // handle firebase dynamic link
+        [[FIRDynamicLinks dynamicLinks]
+         handleUniversalLink:url
+         completion:^(FIRDynamicLink * _Nullable dynamicLink, NSError * _Nullable error) {
+            // Try this method as some dynamic links are not recognize by handleUniversalLink
+            // ISSUE: https://github.com/firebase/firebase-ios-sdk/issues/743
+            dynamicLink = dynamicLink ? dynamicLink
+            : [[FIRDynamicLinks dynamicLinks]
+               dynamicLinkFromUniversalLinkURL:url];
+
+            if (dynamicLink) {
+                [self postDynamicLink:dynamicLink];
+            }
+        }];
+    }
+
 - (void)getDynamicLink:(CDVInvokedUrlCommand *)command {
     CDVPluginResult *pluginResult;
     if (self.lastDynamicLinkData) {
