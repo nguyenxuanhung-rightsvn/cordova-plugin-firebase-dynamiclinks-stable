@@ -40,6 +40,7 @@
             }
         }];
     }
+}
 
 - (void)getDynamicLink:(CDVInvokedUrlCommand *)command {
     CDVPluginResult *pluginResult;
